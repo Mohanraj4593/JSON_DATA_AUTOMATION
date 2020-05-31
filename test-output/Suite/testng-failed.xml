@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]">
+  <test name="Test(failed)" preserve-order="true">
+    <classes>
+      <class name="com.api.testing.WeatherIdANDDescriptionValidator">
+        <methods>
+          <include name="idDescrptionVerify"/>
+        </methods>
+      </class> <!-- com.api.testing.WeatherIdANDDescriptionValidator -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
