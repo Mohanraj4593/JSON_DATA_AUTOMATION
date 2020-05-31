@@ -5,7 +5,8 @@
     <classes>
       <class name="com.api.testing.Temprature_Validator">
         <methods>
-          <include name="temperatureValidation"/>
+          <include name="tempAndminTempValidation"/>
+          <include name="tempAndmaxTempValidation"/>
         </methods>
       </class> <!-- com.api.testing.Temprature_Validator -->
     </classes>

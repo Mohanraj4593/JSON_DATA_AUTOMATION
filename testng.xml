@@ -5,6 +5,7 @@
    <classes>
       <class name="com.api.testing.WeatherIdANDDescriptionValidator"/>
       <class name="com.api.testing.Hourly_Interval"/>
+      <class name="com.api.testing.Temprature_Validator"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

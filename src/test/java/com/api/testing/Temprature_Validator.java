@@ -38,52 +38,63 @@ public class Temprature_Validator {
 		"https://samples.openweathermap.org/data/2.5/forecast/hourly?q=London,us&appid=b6907d289e10d714a6e88b30761fae22")
 	  .then().extract().jsonPath()
 	  .getList("list.main.temp_max");
-	 
+	 }
 	
-System.out.println(temp);
-System.out.println(mintemp);
-System.out.println(maxtemp);
-System.out.println("========================================================");
-System.out.println(temp.size());
-System.out.println(mintemp.size());
-System.out.println(maxtemp.size());
+	
+
+	
+	
+boolean eVal=true;
+boolean aVal;
 
 
-}
-	
-boolean eValue=true;
+
 @Test
-public void temperatureValidation() 
+public void tempAndminTempValidation() 
 {
-	int i,j,k;
-	for(i=0;i<temp.size();i++) 
+	for(int i=0;i<temp.size();i++) 
 	{
-		for(j=0;j<mintemp.size();j++) 
+		for(int j=0;j<mintemp.size();j++) 
 		{
-				/*for(k=0;k<maxtemp.size();k++) 
-				{
-				if(temp.get(i)<mintemp.get(j)&&temp.get(i)>maxtemp.size())	
-				{
-					Assert.fail(temp.get(i)+"is gretaer than "+maxtemp.get(j)+" "+temp.get(i)+"is less than "+mintemp.get(j));
-				}
-				else {
-					Assert.assertEquals(eValue,temp.get(i)==mintemp.get(j));
-				}
-		
-				}*/
-			double a[]=new double[temp.size()];
-			double[] arr = temp.stream().mapToDouble(Double::doubleValue).toArray(); 
-System.out.println("Converted value "+arr);
-		//	Assert.assertEquals(eValue,temp1>=tempmin1);
+			if(temp.get(i).doubleValue()>=mintemp.get(j).doubleValue()) 
+			{	aVal=true;
+				Assert.assertEquals(eVal, aVal);
+			}
+			
+			
+			else {
+				Assert.fail("Temperature is minimum");
+			}
+			
+			Object[] a=temp.toArray();
+			for (Object o :a) {
+				System.out.println(o);
+			}
 		}
 	}
+}			
+			
+	@Test
+	public void tempAndmaxTempValidation() 
+	{
+		for(int i=0;i<temp.size();i++) 
+		{
+			for(int j=0;j<maxtemp.size();j++) 
+			{
+				if(temp.get(i).doubleValue()<=maxtemp.get(j).doubleValue()) 
+				{	aVal=true;
+					Assert.assertEquals(eVal, aVal);
+				}
+				else {
+					Assert.fail("Temperature is exceeding the max limit");
+				}
+				
+			}
+		}
+	
 
-
-}
-
-
-
-
-
+			
+	}
+	
 
 }

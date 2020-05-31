@@ -3,6 +3,16 @@
 <suite name="Failed suite [Suite]">
   <test name="Test(failed)" preserve-order="true">
     <classes>
+      <class name="com.api.testing.Temprature_Validator">
+        <methods>
+          <include name="temperatureValidation"/>
+        </methods>
+      </class> <!-- com.api.testing.Temprature_Validator -->
+      <class name="com.api.testing.Hourly_Interval">
+        <methods>
+          <include name="hourlyInterval"/>
+        </methods>
+      </class> <!-- com.api.testing.Hourly_Interval -->
       <class name="com.api.testing.WeatherIdANDDescriptionValidator">
         <methods>
           <include name="idDescrptionVerify"/>
