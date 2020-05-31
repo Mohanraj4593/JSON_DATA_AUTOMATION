@@ -17,32 +17,27 @@ public class Temprature_Validator {
 	List<Double> maxtemp; 
 	
 	@Test
-	public void getData() 
-	{
-		 
-		 temp=get("\r\n" + 
-		"https://samples.openweathermap.org/data/2.5/forecast/hourly?q=London,us&appid=b6907d289e10d714a6e88b30761fae22")
-	  .then().extract().jsonPath()
-	  .getList("list.main.temp");
-		
+	public void getData() {
 
-		
-		 mintemp=get("\r\n" + 
-		"https://samples.openweathermap.org/data/2.5/forecast/hourly?q=London,us&appid=b6907d289e10d714a6e88b30761fae22")
-	  .then().extract().jsonPath()
-	  .getList("list.main.temp_min");
-		 
+		temp = get("\r\n" +
+				"https://samples.openweathermap.org/data/2.5/forecast/hourly?q=London,us&appid=b6907d289e10d714a6e88b30761fae22")
+				.then().extract().jsonPath()
+				.getList("list.main.temp");
 
-		
-		 maxtemp=get("\r\n" + 
-		"https://samples.openweathermap.org/data/2.5/forecast/hourly?q=London,us&appid=b6907d289e10d714a6e88b30761fae22")
-	  .then().extract().jsonPath()
-	  .getList("list.main.temp_max");
-	 }
-	
-	
 
-	
+		mintemp = get("\r\n" +
+				"https://samples.openweathermap.org/data/2.5/forecast/hourly?q=London,us&appid=b6907d289e10d714a6e88b30761fae22")
+				.then().extract().jsonPath()
+				.getList("list.main.temp_min");
+
+
+		maxtemp = get("\r\n" +
+				"https://samples.openweathermap.org/data/2.5/forecast/hourly?q=London,us&appid=b6907d289e10d714a6e88b30761fae22")
+				.then().extract().jsonPath()
+				.getList("list.main.temp_max");
+
+
+	}
 	
 boolean eVal=true;
 boolean aVal;
@@ -66,13 +61,11 @@ public void tempAndminTempValidation()
 				Assert.fail("Temperature is minimum");
 			}
 			
-			Object[] a=temp.toArray();
-			for (Object o :a) {
-				System.out.println(o);
-			}
+		
+			
 		}
 	}
-}			
+}
 			
 	@Test
 	public void tempAndmaxTempValidation() 

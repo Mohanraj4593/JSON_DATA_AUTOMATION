@@ -6,10 +6,8 @@ import org.testng.annotations.Test;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import okhttp3.ResponseBody;
 
 import static io.restassured.RestAssured.*;
-import static org.hamcrest.Matchers.equalTo;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,16 +29,19 @@ public class WeatherIdANDDescriptionValidator{
 			    .then().extract().jsonPath()
 			    .getList("list.weather.description");
 				 
+      					 
+				 
+				 
+				
 
-										 
+				 
 		
-		int i=0,j=0;
-		//First Logic
 		int eID=800;
 		String eDescription="clear sky";
 		int eID1=500;
 		String eDescription1="light rain";
-	/*	while(i!=id.size()&&j!=description.size()) {
+	
+		/*	while(i!=id.size()&&j!=description.size()) {
 			System.out.println(id.get(i));
 			get("\r\n" + 
 "https://samples.openweathermap.org/data/2.5/forecast/hourly?q=London,us&appid=b6907d289e10d714a6e88b30761fae22").then().assertThat()

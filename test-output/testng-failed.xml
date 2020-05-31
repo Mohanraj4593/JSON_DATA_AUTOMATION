@@ -3,12 +3,11 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)" preserve-order="true">
     <classes>
-      <class name="com.api.testing.Temprature_Validator">
+      <class name="com.api.testing.WeatherIdANDDescriptionValidator">
         <methods>
-          <include name="tempAndminTempValidation"/>
-          <include name="tempAndmaxTempValidation"/>
+          <include name="idDescrptionVerify"/>
         </methods>
-      </class> <!-- com.api.testing.Temprature_Validator -->
+      </class> <!-- com.api.testing.WeatherIdANDDescriptionValidator -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

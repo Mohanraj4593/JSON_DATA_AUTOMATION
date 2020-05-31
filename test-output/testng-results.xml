@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="2" total="3" passed="1">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="10548" started-at="2020-05-31T16:16:35Z" finished-at="2020-05-31T16:16:46Z">
+  <suite name="Default suite" duration-ms="7993" started-at="2020-05-31T16:53:29Z" finished-at="2020-05-31T16:53:37Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="10548" started-at="2020-05-31T16:16:35Z" finished-at="2020-05-31T16:16:46Z">
-      <class name="com.api.testing.Temprature_Validator">
-        <test-method status="PASS" signature="getData()[pri:0, instance:com.api.testing.Temprature_Validator@66480dd7]" name="getData" duration-ms="10517" started-at="2020-05-31T16:16:35Z" finished-at="2020-05-31T16:16:46Z">
-        </test-method> <!-- getData -->
-        <test-method status="FAIL" signature="tempAndmaxTempValidation()[pri:0, instance:com.api.testing.Temprature_Validator@66480dd7]" name="tempAndmaxTempValidation" duration-ms="3" started-at="2020-05-31T16:16:46Z" finished-at="2020-05-31T16:16:46Z">
-          <exception class="java.lang.ClassCastException">
+    <test name="Default test" duration-ms="7993" started-at="2020-05-31T16:53:29Z" finished-at="2020-05-31T16:53:37Z">
+      <class name="com.api.testing.WeatherIdANDDescriptionValidator">
+        <test-method status="FAIL" signature="idDescrptionVerify()[pri:0, instance:com.api.testing.WeatherIdANDDescriptionValidator@66480dd7]" name="idDescrptionVerify" duration-ms="7963" started-at="2020-05-31T16:53:29Z" finished-at="2020-05-31T16:53:37Z">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[java.lang.Float cannot be cast to java.lang.Double]]>
+              <![CDATA[expected:<[803]> but was:<800>]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.ClassCastException: java.lang.Float cannot be cast to java.lang.Double
-	at com.api.testing.Temprature_Validator.tempAndmaxTempValidation(Temprature_Validator.java:80)
+              <![CDATA[java.lang.AssertionError: expected:<[803]> but was:<800>
+	at org.testng.Assert.fail(Assert.java:89)
+	at org.testng.Assert.failNotEquals(Assert.java:489)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:160)
+	at com.api.testing.WeatherIdANDDescriptionValidator.idDescrptionVerify(WeatherIdANDDescriptionValidator.java:68)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -43,45 +45,9 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.ClassCastException -->
-        </test-method> <!-- tempAndmaxTempValidation -->
-        <test-method status="FAIL" signature="tempAndminTempValidation()[pri:0, instance:com.api.testing.Temprature_Validator@66480dd7]" name="tempAndminTempValidation" duration-ms="0" started-at="2020-05-31T16:16:46Z" finished-at="2020-05-31T16:16:46Z">
-          <exception class="java.lang.ClassCastException">
-            <message>
-              <![CDATA[java.lang.Float cannot be cast to java.lang.Double]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.ClassCastException: java.lang.Float cannot be cast to java.lang.Double
-	at com.api.testing.Temprature_Validator.tempAndminTempValidation(Temprature_Validator.java:59)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:702)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:894)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1219)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:768)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:87)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1188)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1113)
-	at org.testng.TestNG.run(TestNG.java:1025)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.ClassCastException -->
-        </test-method> <!-- tempAndminTempValidation -->
-      </class> <!-- com.api.testing.Temprature_Validator -->
+          </exception> <!-- java.lang.AssertionError -->
+        </test-method> <!-- idDescrptionVerify -->
+      </class> <!-- com.api.testing.WeatherIdANDDescriptionValidator -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
